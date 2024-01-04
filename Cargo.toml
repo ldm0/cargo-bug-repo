@@ -1,0 +1,15 @@
+[package]
+name = "cargo-bug-repo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+serde = "1"
+foo = { path = "vendor/foo" }
+bar = { path = "vendor/bar" }
+
+[patch.crates-io]
+once_cell_0_1 = { package = "once_cell", path = "vendor/once_cell_0_1" }
+once_cell_1_19 = { package = "once_cell", path = "vendor/once_cell_1_19" }
